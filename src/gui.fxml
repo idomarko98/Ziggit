@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="621.0" prefWidth="857.0" style="-fx-background-color: orange;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View">
+    <children>
+        <Line endX="522.6666870117188" endY="246.00001525878906" layoutX="212.0" layoutY="-78.0" startX="522.6666870117188" startY="447.88995361328125" stroke="#5d92bb" strokeWidth="250.0" />
+        <Line endX="601.605712890625" endY="7.666650772094727" layoutX="140.0" layoutY="11.0" startX="-129.6176300048828" startY="7.666654586791992" stroke="#5d92bb" strokeWidth="250.0" />
+        <TextField fx:id="courseSearch" layoutX="645.0" layoutY="168.0" prefHeight="25.0" prefWidth="195.0" />
+        <ImageView fx:id="search_img" fitHeight="25.0" fitWidth="27.0" layoutX="616.0" layoutY="170.0" onMouseClicked="#searchClicked">
+            <image>
+                <Image url="@mag.png" />
+            </image>
+        </ImageView>
+        <Text fill="#e37319" layoutX="610.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="זיגית" wrappingWidth="249.99999877036754">
+            <font>
+                <Font name="Guttman Yad-Brush" size="83.0" />
+            </font>
+        </Text>
+        <ListView fx:id="courses_lst" layoutX="608.0" layoutY="207.0" prefHeight="416.0" prefWidth="250.0" />
+        <Button fx:id="create_btn" layoutX="616.0" layoutY="569.0" mnemonicParsing="false" onMouseClicked="#createSchedule" prefHeight="32.0" prefWidth="133.0" text="צור מערכת">
+            <font>
+                <Font name="Guttman-Aram" size="13.0" />
+            </font>
+        </Button>
+        <ImageView fx:id="logo_img" fitHeight="173.0" fitWidth="189.0" layoutX="-14.0" layoutY="-21.0">
+            <image>
+                <Image url="@output-onlinepngtools.png" />
+            </image>
+        </ImageView>
+        <Line endX="616.9390258789062" endY="7.62939453125E-6" layoutX="249.0" layoutY="143.0" startX="-238.39430236816406" startY="7.62939453125E-6" />
+        <Button fx:id="prevSched" layoutX="121.0" layoutY="167.0" mnemonicParsing="false" onAction="#prevSched" prefHeight="32.0" prefWidth="108.0" text="מערכת הקודמת">
+            <font>
+                <Font name="Guttman-Aram" size="13.0" />
+            </font>
+        </Button>
+        <Button fx:id="nextSched" layoutX="14.0" layoutY="167.0" mnemonicParsing="false" onAction="#nextSched" prefHeight="32.0" prefWidth="100.0" text="מערכת הבאה">
+            <font>
+                <Font name="Guttman-Aram" size="13.0" />
+            </font>
+        </Button>
+        <CheckBox fx:id="morning" layoutX="435.0" layoutY="148.0" mnemonicParsing="false" onAction="#morningClick" text="שעות בוקר" />
+        <CheckBox fx:id="evening" layoutX="435.0" layoutY="169.0" mnemonicParsing="false" onAction="#eveningClick" text="שעות ערב" />
+        <CheckBox fx:id="windows" layoutX="435.0" layoutY="189.0" mnemonicParsing="false" onAction="#windowClick" text="ללא חלונות" />
+        <Text layoutX="519.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="עדיפות ל:" wrappingWidth="249.99999877036754">
+            <font>
+                <Font name="Arial" size="16.0" />
+            </font>
+        </Text>
+        <GridPane fx:id="dafna" alignment="TOP_RIGHT" gridLinesVisible="true" layoutX="4.0" layoutY="220.0" style="-fx-background-color: white;">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="-Infinity" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="א" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.halignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ב" GridPane.columnIndex="3" GridPane.halignment="CENTER">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ג" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ד" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+                <font>
+                    <Font name="System Bold" size="15.0" />
+                </font></Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ה" GridPane.halignment="CENTER" >
+                        <font>
+                            <Font name="System Bold" size="15.0" />
+                        </font>
+                </Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="08:00-09:00" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="09:00-10:00" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="10:00-11:00" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="11:00-12:00" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="12:00-13:00" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="13:00-14:00" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="6">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="14:00-15:00" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="7">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="15:00-16:00" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="8">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="16:00-17:00" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="9">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="17:00-18:00" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="10">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="18:00-19:00" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="11">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="19:00-20:00" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="12">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Text>
+                <Text fx:id="txt00" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                <Text fx:id="txt10" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                <Text fx:id="txt20" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                <Text fx:id="txt30" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                <Text fx:id="txt40" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                <Text fx:id="txt50" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                <Text fx:id="txt60" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+                <Text fx:id="txt70" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+                <Text fx:id="txt80" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="4" GridPane.rowIndex="9" />
+                <Text fx:id="txt90" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="4" GridPane.rowIndex="10" />
+                <Text fx:id="txt100" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="4" GridPane.rowIndex="11" />
+                <Text fx:id="txt110" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="4" GridPane.rowIndex="12" />
+                <Text fx:id="txt01" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                <Text fx:id="txt11" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                <Text fx:id="txt21" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                <Text fx:id="txt31" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                <Text fx:id="txt41" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                <Text fx:id="txt51" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                <Text fx:id="txt61" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                <Text fx:id="txt71" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+                <Text fx:id="txt81" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+                <Text fx:id="txt91" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="3" GridPane.rowIndex="10" />
+                <Text fx:id="txt101" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="3" GridPane.rowIndex="11" />
+                <Text fx:id="txt111" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="3" GridPane.rowIndex="12" />
+                <Text fx:id="txt02" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                <Text fx:id="txt12" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                <Text fx:id="txt22" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                <Text fx:id="txt32" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                <Text fx:id="txt42" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                <Text fx:id="txt52" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                <Text fx:id="txt62" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                <Text fx:id="txt72" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                <Text fx:id="txt82" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+                <Text fx:id="txt92" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+                <Text fx:id="txt102" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="11" />
+                <Text fx:id="txt112" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="12" />
+                <Text fx:id="txt04" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="1" />
+                <Text fx:id="txt14" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="2" />
+                <Text fx:id="txt24" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="3" />
+                <Text fx:id="txt34" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="4" />
+                <Text fx:id="txt44" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="5" />
+                <Text fx:id="txt54" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="6" />
+                <Text fx:id="txt64" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="7" />
+                <Text fx:id="txt74" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="8" />
+                <Text fx:id="txt84" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="9" />
+                <Text fx:id="txt94" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="10" />
+                <Text fx:id="txt104" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="11" />
+                <Text fx:id="txt114" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.rowIndex="12" />
+                <Text fx:id="txt03" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Text fx:id="txt13" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Text fx:id="txt23" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Text fx:id="txt33" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <Text fx:id="txt53" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                <Text fx:id="txt63" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                <Text fx:id="txt73" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                <Text fx:id="txt83" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                <Text fx:id="txt93" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                <Text fx:id="txt113" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+                <Text fx:id="txt103" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                <Text fx:id="txt43" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            </children>
+        </GridPane>
+    </children>
+</AnchorPane>
