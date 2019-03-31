@@ -21,7 +21,6 @@
         <TextField fx:id="courseSearch" layoutX="645.0" layoutY="168.0" prefHeight="25.0" prefWidth="195.0" />
         <ImageView fx:id="search_img" fitHeight="25.0" fitWidth="27.0" layoutX="616.0" layoutY="170.0" onMouseClicked="#searchClicked">
             <image>
-                <Image url="@mag.png" />
             </image>
         </ImageView>
         <Text fill="#e37319" layoutX="610.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="זיגית" wrappingWidth="249.99999877036754">
@@ -37,7 +36,6 @@
         </Button>
         <ImageView fx:id="logo_img" fitHeight="173.0" fitWidth="189.0" layoutX="-14.0" layoutY="-21.0">
             <image>
-                <Image url="@output-onlinepngtools.png" />
             </image>
         </ImageView>
         <Line endX="616.9390258789062" endY="7.62939453125E-6" layoutX="249.0" layoutY="143.0" startX="-238.39430236816406" startY="7.62939453125E-6" />
